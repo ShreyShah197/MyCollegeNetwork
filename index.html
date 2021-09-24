@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <script src="profile1.js"></script>
     <style>
+        *{box-sizing: border-box;}
         body {
             /* background-color: #35032e; */
             /* background-color: #baa4b1;
@@ -31,9 +32,24 @@
             margin: 0px;
             height: 1400px;
             z-index: -1;
+            /* width:100%; */
+            /* overflow-x: hidden !important; */
         }
+        /* .options a:hover{
+            color:black;
+        } */
+        
+ #bio-text{
+    display: none;
+}
+#network-text{
+    display: none;
+}
+#post-text{
+    display: none;}
 
         .navbar {
+            width: 100%;
             display: flex;
             /* align-items: center; */
             justify-content: center;
@@ -50,8 +66,8 @@
             /* border-radius: 20px; */
             position: sticky;
             top: 0px;
-            /* margin:0px;
-            width :100%; */
+            /* margin:0px;*/
+             /* width :100%; */
             transition: all 0.7s ease-in-out ;
 
 
@@ -112,7 +128,7 @@
             transition: all 0.5s ease-in-out ;
         }
 
-        a:hover {
+        #nav a:hover {
             color: #f9e45b;
             /* text-decoration: underline; */
             /* border:2px solid white */
@@ -131,29 +147,31 @@
 
         .para {
             background-color: whitesmoke;
-            height: 1200px;
+            height: 1000px;
             z-index: 1;
             width: 80%;
-            margin-top: 100px;
-            margin: auto;
+            /* margin-top: 200px; */
+            margin: 150px auto ;
             border-radius: 10px;
-            display: block;
+            /* display: block; */
             box-shadow: 5px 10px 49px 16px black;
+           
             
 
         }
 
-        .space {
+        /* .space {
             height: 90%;
             margin-top: 100px;
-        }
+            /* width: auto; */
+         
 
         .socialmedia {
             /* position: relative;
         right:10px; */
             position: absolute;
             top: 390px;
-            right: 80px;
+            right: 100px;
             float: right;
             padding-right: 100px;
             /* padding-top:30px; */
@@ -165,7 +183,7 @@
             padding-left: 30px;
             /* background-color: black; */
         }
-
+     
         h5 {
             color: #2a243a;
             /* text-align: center; */
@@ -176,6 +194,9 @@
             font-weight: bolder;
             /* font-size: 200px; */
             padding-left: 10px;
+        }
+        .menu{
+            display: none;
         }
 
         .img img {
@@ -188,8 +209,8 @@
 
         .name {
             position: absolute;
-            top: 200px;
-            right: 170px;
+            top: 230px;
+            right: 200px;
         }
 
         h3 {
@@ -204,7 +225,7 @@
             /* background-color:#7c7097 ; */
             background-color: #f9e45b;
             height: 30px;
-            padding-bottom: 3px;
+            padding-bottom: 38px;
              box-shadow: 2px 2px 10px 5px black ;
 
         }
@@ -221,34 +242,34 @@
         }
         .flex1{
             /* padding-left: 50px; */
-            font-size: 14px;
+            font-size: 15px;
             width:170px;
-            height: 26px;
+            height: 30px;
             /* border: 2px solid #999; */
             margin: 20px;
             text-align: center;
-            padding-top: 6px;
+            padding: 0px 5px 15px 5px;
             /* background-color: #ac9ecc; */
-            background-color: #f9e45b;
-            
+            /* background-color: #f9e45b; */
+            border: 2px solid white;
             /* background-color:#1f2434 ; */
+            background-color: #11101D;
             border-radius: 5px;
             cursor: pointer;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Oswald', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
             /* color: white; */
             box-shadow: 1px 1px 7px 5px white;
             transition: all 0.5s ;
             text-decoration: none;
-            color: black;
+            color: white;
+            font-weight: bolder;
             
         }
          a:focus{
             background-color:#1f2434 ;
             color:white;}
-         .options.selected{
-            background-color:#1f2434 ;
-            color:white;
-        }
+        
 
         .text{
             justify-content: center;
@@ -276,34 +297,202 @@
         #logo a{
             color: #f9e45b;
         }
+        /* @media (max-width:450px){
+            .para{
+                display: block;
+            }
+            /* .upper{
+                display: flex;
+                flex-direction: column; */
+/*             
+            .lower{
+                display: flex;
+                flex-direction: column;
+            }
+            .options{
+                display: flex;
+                flex-direction: column;
+                background-color: none;
+            }
+            #nav{
+                display: none;
+            }
+        
+
+        } */ 
+        @media   (max-width: 813px) {
+            #nav{
+                display: none;
+            }
+  
+  #search{
+      display: none;
+  }
+  .menu{
+      display: block;
+      position: absolute;
+      right:0px
+      
+    }
+    .menu a{
+    border-radius: 400px;}
+  .name{
+      order:1;
+      /* position: absolute;
+      right: 90px; */
+      position: unset;
+      display: block;
+      margin: auto;
+  }
+  .socialmedia{
+      position: unset;
+      display: block;
+      order: 3;
+      text-align: center;
+  }
+  .socialmedia a{
+      padding-left: 20px;
+  }
+  .socialmedia{
+      padding-right: 0px;
+  }
+  .para{
+       width: 88%;
+      max-width: 100% !important;
+            overflow-x: hidden !important;
+      /* position:-ms-page;  */
+      margin: 60px auto;
+      
+  }
+  .upper{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items:center;
+                
+}
+.img{
+    margin-left: 0px;
+    order:2;
+    padding: 0px;
+}
+.options{
+    margin: 40px 3px;
+}
+/* .options{
+                display: flex;
+                flex-direction: column;
+                background-color: none;
+            } */
+        }
+        
     </style>
 </head>
+<script>
+   
+        
+    
+    function togglehide(){
+        let para = document.getElementById('bio-text');
+        let para1= document.getElementById('post-text');
+        let para2= document.getElementById('network-text');
+        let para3 = document.getElementsByClassName('bio1');
+        let para4= document.getElementById('bio')
+        let para6= document.getElementById('posts')
+        let para5= document.getElementById('network')
+        para4.style.backgroundColor = '#f9e45b';
+        para4.style.color= 'black';
+        para4.style.boxShadow= "1px 1px 7px 5px white";
+        para5.style.backgroundColor = '#11101D';
+        para5.style.color= 'white';
+        para5.style.boxShadow= "0px";
+        para6.style.backgroundColor = '#11101D';
+        para6.style.color= 'white';
+        para6.style.boxShadow= "0px";
+        para.style.display= 'block';
+        para1.style.display = 'none';
+        para2.style.display = 'none';
 
+    
+    }
+    function togglehidepost(){
+        let v = document.getElementById('bio-text');
+        let v1= document.getElementById('post-text');
+        let v2= document.getElementById('network-text');
+        let para4= document.getElementById('bio')
+        let para6= document.getElementById('posts')
+        let para5= document.getElementById('network')
+        para4.style.backgroundColor = '#11101D';
+        para4.style.color= 'white';
+        para4.style.boxShadow= "0px";
+        para6.style.backgroundColor = '#f9e45b';
+        para6.style.color= 'black';
+        para6.style.boxShadow= "1px 1px 7px 5px white";
+        para5.style.backgroundColor = '#11101D';
+        para5.style.color= 'white';
+        para5.style.boxShadow= "0px";
+        v.style.display = 'none';
+        v1.style.display = 'block';
+        v2.style.display = 'none';
+        para3.style.display= 'flex';
+    
+    }
+    function togglehide2(){
+        let para = document.getElementById('bio-text');
+        let para1= document.getElementById('post-text');
+        let para2= document.getElementById('network-text');
+        let para4= document.getElementById('bio')
+        let para6= document.getElementById('posts')
+        let para5= document.getElementById('network')
+        para4.style.backgroundColor = '#11101D';
+        para4.style.color= 'white';
+        para4.style.boxShadow= "0px";
+        para6.style.backgroundColor = '#11101D';
+
+        para6.style.color= 'white';
+        para6.style.boxShadow= "0px";
+        para5.style.backgroundColor = '#f9e45b';
+        para5.style.color= 'black';
+        para5.style.boxShadow= "1px 1px 7px 5px white";
+        para.style.display = 'none';
+        para1.style.display = 'none';
+        para2.style.display = 'block';
+        para3.style.display= 'flex';
+    
+    }
+  
+
+    </script>
 <body>
     <div class="navbar">
         <div class="flex" id="logo">
             <a href="">
                 My College Network</a>
-        </div>
+            </div>
+            <div class="menu">
+                <a href="#"><img src="icon.png" width="60px" height="60px" alt="error" srcset=""></a>
+            </div>
         <div class="flex" id="nav">
             <a href="" class="shrey">Home</a>
             <a href="" class="shrey">Clubs</a>
             <a href="" class="shrey">Announcements</a>
             <a href="" class="shrey">GoPremium</a>
-
+            
+            
         </div>
+        
         <div class="flex" id="search">
             <form action="#">
                 <input type="text" placeholder=" Search usernames" name="search">
-
+    
             </form>
         </div>
-
     </div>
-    <div class="space">
+    <!-- <div class="space"> -->
         <div class="para">
+            <div class="upper">
             <div class="img">
-                <img src="OIP.JPG" alt="">
+                <img src="OIP.png" alt="">
                 <h5>PICT CSE'24 | WEB DEVELOPER</h5>
             </div>
 
@@ -318,18 +507,28 @@
             <div class="name">
                 <h3>Shrey Shah</h3>
             </div>
+             </div> 
+            <div class="lower">
             <div class="options">
-                <a href=""  class="flex1" id="bio">BIO</a>
-                <a href=""  class="flex1" id="posts">POSTS</a>
-                <a href="" class="flex1" id="network">NETWORK</a>
+                <button   class="flex1" id="bio" onclick="togglehide()">BIO</button>
+                <button  class="flex1" id="posts" onclick="togglehidepost()">POSTS</button>
+                <button class="flex1" id="network" onclick="togglehide2()" >NETWORK</button>
             </div>
-           <div class="bio1" id="bio-text">
-              <div class="text"> BIO TEXT
-           </div>
-           </div>
+            <div class="bio1" >
+               <div class="text" id="bio-text"> BIO TEXT
+            </div>
+            <div class="text" id="post-text"> POST TEXT
+            </div>
+            <div class="text" id="network-text" > NETWORK TEXT
+            </div>
+            
+            </div>  
+           
+            </div>
+       
         </div>
-        </div>
-    </div>
+        
+    <!-- </div> -->
 
 
 </body>
